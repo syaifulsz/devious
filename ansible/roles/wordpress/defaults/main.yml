@@ -1,0 +1,3 @@
+wordpress:
+    git_repo: "https://github.com/WordPress/WordPress.git"
+    project_path: /var/www/wordpress
