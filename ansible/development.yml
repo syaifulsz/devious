@@ -4,6 +4,17 @@
   user: vagrant
   become: true
 
+  vars_files:
+    - group_vars/credentials.yml
+
+  vars:
+    # optional to set. default values is already in ./your_bitbucket_repo/default/main.yml
+    # ------------------------------------------------------------------------------------
+    # project_path: /var/www
+    # project_name: myproject
+    # project_branch: develop
+    # ------------------------------------------------------------------------------------
+
   roles:
     # - vbox_guest_additions    # on enable vbox_guest_additions if required
     # - system

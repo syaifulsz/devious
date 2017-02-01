@@ -1,0 +1,5 @@
+# this is where you setup default values for the vars
+# can be overidden by define the vars in the main playbook (development.yml)
+project_path: /var/www
+project_name: myproject
+project_branch: develop

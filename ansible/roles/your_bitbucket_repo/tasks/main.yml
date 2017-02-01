@@ -1,6 +1,10 @@
 ---
 - name: your_bitbucket_repo | Clone repository
-  git: repo=https://{{ bitbucket_username }}@bitbucket.org/username/repo.git dest={{ project_path }}/your_bitbucket_repo
-  tags: your_bitbucket_repo
+  git: 
+    repo=https://{{ bitbucket_username }}:{{ bitbucket_password }}@bitbucket.org/username/repo.git 
+    dest={{ project_path }}/{{ project_name }}
+    version={{ project_branch }} 
+    update=no 
+  tags: project_name
 
 # repo=https://x-token-auth:{{ bitbucket_token }}@bitbucket.org/username/your_bitbucket_repo.git
