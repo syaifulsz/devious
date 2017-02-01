@@ -1,0 +1,4 @@
+---
+- name: WordPress | Clone repository
+  git: repo={{ wordpress.git_repo }} dest={{ wordpress.project_path }}
+  tags: wordpress
