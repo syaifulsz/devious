@@ -51,6 +51,14 @@ vagrant plugin install vagrant-vbguest
 
 In case, somehow, you don't do this, or you just don't require this on you machine's Vagrant. You can always enabled `vbox_guest_additions` role on `development.yml` file. But, you have to make sure that you had the right kernal and VirtualBox version added to `roles/vbox_guest_additions/defaults/main.yml`.
 
+## Repository Projects
+
+If you had a project host on either Github or Bitbucket, run this bash script first to set up your repository credentials.
+
+```
+bash scripts/project_repo_credentials.sh
+```
+
 ## Get Started
 
 Run...

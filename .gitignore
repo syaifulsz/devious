@@ -1,2 +1,3 @@
 /.vagrant/
 /www/
+/ansible/group_vars/project_repo_credentials.yml

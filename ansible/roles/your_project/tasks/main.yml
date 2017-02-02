@@ -1,0 +1,4 @@
+---
+- name: Your Project | Clone repository
+  git: repo=https://{{ project_username }}:{{ project_password }}@{{ project_repo }} dest={{ project_path }}/{{ project_name }} version={{ project_branch }}
+  tags: {{ project_name }}
