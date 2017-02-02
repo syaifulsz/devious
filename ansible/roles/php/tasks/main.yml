@@ -14,13 +14,29 @@
     - php7.0-memcached
     - php7.0-mbstring
     - php7.0-zip
+    - php7.0-xml
 
 - name: PHP | Install Composer
   get_url: url=https://getcomposer.org/composer.phar dest=/usr/local/bin/composer mode=0755 validate_certs=no
 
+- name: PHP | Install Composer Asset Plugin globally
+  become: false
+  shell: composer global require "fxp/composer-asset-plugin:^1.2.0"
+
+- name: PHP | Install PHPUnit
+  get_url: url=https://phar.phpunit.de/phpunit.phar dest=/usr/local/bin/phpunit mode=555
+
 - name: PHP | Copy pool configuration
   template: src=www.conf dest=/etc/php/7.0/fpm/pool.d/
-  notify: restart php7.0-fpm
+  notify: restart php
+
+- name: PHP | Re-configure php.ini file | Enable display php errors
+  lineinfile: dest=/etc/php/7.0/fpm/php.ini regexp='^display_errors =' line='display_errors = On'
+  notify: restart php
+
+- name: PHP | Re-configure php.ini file | Enable short open tag
+  lineinfile: dest=/etc/php/7.0/fpm/php.ini regexp='^short_open_tag =' line='short_open_tag = On'
+  notify: restart php
 
 - name: PHP | Restart PHP Server
   service: name=php7.0-fpm state=started enabled=true

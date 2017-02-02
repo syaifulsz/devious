@@ -4,6 +4,9 @@
   user: vagrant
   become: true
 
+  vars_files:
+    - group_vars/project_repo_credentials.yml
+
   roles:
     # - vbox_guest_additions    # on enable vbox_guest_additions if required
     - system
@@ -15,4 +18,4 @@
     - memcached
     - nginx
     # - wordpress
-    # - your_project              # run scripts/project_repo_credentails.sh first!
+    # - your_project            # run scripts/project_repo_credentails.sh first!

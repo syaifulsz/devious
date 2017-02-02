@@ -22,7 +22,7 @@
 
   - name: virtualbox | main.yml >> virtualbox guest additions present
     shell: sh {{ virtualbox.guest_additions.iso_mountdir }}/VBoxLinuxAdditions.run
-    ignore_errors: True
+    ignore_errors: true
     tags: virtualbox
 
   - name: virtualbox | main.yml >> umount virtualbox guest additions iso

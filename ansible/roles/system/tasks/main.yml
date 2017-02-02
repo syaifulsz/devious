@@ -19,5 +19,6 @@
     - python-pycurl
 
 - name: System | Configure ViM
+  become: true
   template: src=bashrc dest=~/.bashrc
-  notify: source bashrc
+  # notify: source bashrc
