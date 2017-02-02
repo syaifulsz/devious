@@ -1,4 +1,4 @@
-# Devious - An awesome LEMP stack Ansible for Software Engineers - Beta 2.0.0
+# Devious - An awesome Vagrant LEMP stack Ansible for Software Engineers
 
 Vagrant Ansible creates a Vagrant installation with the following features:
 

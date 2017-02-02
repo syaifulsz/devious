@@ -1,5 +1,5 @@
 ---
-- name: Devious - An awesome LEMP stack Ansible for Software Engineers
+- name: Devious - An awesome Vagrant LEMP stack Ansible for Software Engineers
   hosts: development
   user: vagrant
   become: true
