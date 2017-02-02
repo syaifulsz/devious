@@ -6,13 +6,13 @@
 
   roles:
     # - vbox_guest_additions    # on enable vbox_guest_additions if required
-    # - system
-    # - git
-    # - nodejs                    # tasks includes grunt-cli and bower
-    # - ruby                      # tasks includes sass
-    # - mysql
-    # - php                       # tasks includes composer
-    # - memcached
-    # - nginx
+    - system
+    - git
+    - nodejs                    # tasks includes grunt-cli and bower
+    - ruby                      # tasks includes sass
+    - mysql
+    - php                       # tasks includes composer
+    - memcached
+    - nginx
     # - wordpress
-    - your_project              # run scripts/project_repo_credentails.sh first!
+    # - your_project              # run scripts/project_repo_credentails.sh first!
