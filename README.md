@@ -72,3 +72,7 @@ And wait... there will be a prompt asking for your machine admin/root password, 
 ... and you're done!
 
 You local development machine address is [http://localhost.devio.us](http://localhost.devio.us).
+
+## Contributors
+
+- [Syam Hasan](https://github.com/syamhasan/)
