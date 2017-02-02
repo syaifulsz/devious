@@ -1,4 +1,4 @@
-# Devious - An awesome LEMP stack Ansible for Software Engineers - Beta 2.0.0
+# Devious - An awesome Vagrant LEMP stack Ansible for Software Engineers
 
 Vagrant Ansible creates a Vagrant installation with the following features:
 
@@ -51,6 +51,14 @@ vagrant plugin install vagrant-vbguest
 
 In case, somehow, you don't do this, or you just don't require this on you machine's Vagrant. You can always enabled `vbox_guest_additions` role on `development.yml` file. But, you have to make sure that you had the right kernal and VirtualBox version added to `roles/vbox_guest_additions/defaults/main.yml`.
 
+## Repository Projects
+
+If you had a project host on either Github or Bitbucket, run this bash script first to set up your repository credentials.
+
+```
+bash scripts/project_repo_credentials.sh
+```
+
 ## Get Started
 
 Run...
@@ -64,3 +72,7 @@ And wait... there will be a prompt asking for your machine admin/root password, 
 ... and you're done!
 
 You local development machine address is [http://localhost.devio.us](http://localhost.devio.us).
+
+## Contributors
+
+- [Syam Hasan](https://github.com/syamhasan/)
