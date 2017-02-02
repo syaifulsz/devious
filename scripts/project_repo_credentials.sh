@@ -11,6 +11,14 @@ function urlencode() {
 	done
 }
 
+MY_PATH="`dirname \"$0\"`"              # relative
+MY_PATH="`( cd \"$MY_PATH\" && pwd )`"  # absolutized and normalized
+if [ -z "$MY_PATH" ] ; then
+  # error; for some reason, the path is not accessible
+  # to the script (e.g. permissions re-evaled after suid)
+  exit 1  # fail
+fi
+
 # get username
 echo -e "Enter your project's repository username:"
 read bb_user
@@ -19,5 +27,6 @@ read bb_user
 echo -e "Enter your project's repository password:"
 read bb_pass
 
-echo "project_username: ${bb_user}" > ../ansible/group_vars/project_repo_credentials.yml
-echo "project_password: $(urlencode $bb_pass)" >> ../ansible/group_vars/project_repo_credentials.yml
+touch "$MY_PATH/../ansible/group_vars/project_repo_credentials.yml"
+echo "project_username: ${bb_user}" > "$MY_PATH/../ansible/group_vars/project_repo_credentials.yml"
+echo "project_password: $(urlencode $bb_pass)" >> "$MY_PATH/../ansible/group_vars/project_repo_credentials.yml"
